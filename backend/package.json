@@ -1,0 +1,43 @@
+{
+  "name": "fullltest",
+  "version": "1.0.0",
+  "bin": {
+    "fleet": "./out/src/app/index.js"
+  },
+  "description": "technical test for pulll company",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/typescript/bin/tsc -w",
+    "test": "./node_modules/.bin/cucumber-js -p default ",
+    "start": "node ./out/src/app/index.js",
+    "lint": "eslint . --ext .ts",
+    "fix": "eslint . --ext .ts --fix",
+    "init-db": "sudo -u postgres psql -f db/create_db.sql"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.2",
+    "@types/chai": "^4.3.3",
+    "@types/pg": "^8.6.5",
+    "@types/uuid": "^8.3.4",
+    "@types/yargs": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.25.0",
+    "nodemon": "^2.0.20",
+    "sequelize-cli-typescript": "^3.2.0-c",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "commander": "^9.4.1",
+    "pg": "^8.8.0",
+    "sequelize-cli": "^6.5.1",
+    "sequelize-typescript": "^2.1.5",
+    "shallow-equal-object": "^1.1.1"
+  }
+}
